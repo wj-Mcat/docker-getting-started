@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  test:
+    image: mount-test:latest
+    container_name: mount-test
+    volumes: 
+      - /Users/edz/juzi/xiaoju/xiaoju-bot-api/local-test/mount-test/app.py:/app/mount-test/app.py
+      - type: bind
+        source: /Users/edz/juzi/xiaoju/xiaoju-bot-api/local-test/mount-test/package.json
+        target: /app/mount-test/package.json
+      # - /Users/edz/juzi/xiaoju/xiaoju-bot-api/local-test/mount-test/:/app/mount-test/
